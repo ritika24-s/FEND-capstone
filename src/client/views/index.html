@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>travel.</title>
+</head>
+
+<body>
+    <div id="container__1">
+        <header>
+            travel<span class="red">.</span>
+        </header>
+
+        <section id="tagline">
+            <h2>Let's plan that journey now...</h2>
+        </section>
+
+        <div class="form-container">
+            <form>
+                <input type="text" name="destination" id=destination placeholder="Search your destination" required>
+                <!-- <input type="date" id="travelDate" name="travelDate" value="2020-05-21"> -->
+                <!-- <input type="date" id="travelDate" name="travelDate" min="2020-01-01" max="2020-12-31"> -->
+                <input type="date" id="travelDate">
+                <div class="two-button">
+                    <button type="submit" id="submit-btn">Search</button>
+                    <button class="outlined" type="submit" id="saved-trips-btn">Saved Trips</button>
+                </div>
+            </form>
+            <div id="tripDetails" class="hidden">
+                <h4>Your trip to:</h4>
+                <h1 id="destinationName"></h1><br />
+
+                <h4>Weather forecast:</h4>
+                <div id="weatherForecast"></div><br />
+
+                <h3 id="todos-button">+ add todos</h3>
+                <div id="todos"></div>
+            </div>
+        </div>
+
+        <section class="left">
+            <img id="heroImage" src="../images/bridge.jpg" alt="hero-image">
+        </section>
+        <section class="right">
+        </section>
+
+    </div>
+    <script>
+        // check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // use the window load method to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

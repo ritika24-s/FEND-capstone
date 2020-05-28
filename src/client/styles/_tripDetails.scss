@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+h4 {
+  font-weight: 300;
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h6 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+#todos-button {
+  background-color: $background-color-secondary;
+  text-align: center;
+  width: 20rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  padding: 5px;
+}
+
+li {
+  font-size: 1.5rem;
+  // padding: 5px;
+}
+
+#addTodoInput {
+  margin: 2px 0;
+}
+
+@media (max-width: 730px) {
+
+  #tripDetails {
+    margin: 5px;
+  }
+
+  #addTodoInput {
+    margin: 2px 0;
+    width: 150px;
+  }
+
+}
